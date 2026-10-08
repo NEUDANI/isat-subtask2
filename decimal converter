@@ -1,0 +1,16 @@
+string decimalToHexadecimal(int decimal)
+{
+    string hexadecimal = "";
+    string digits = "0123456789ABCDEF";
+
+    if (decimal == 0)
+        return "0";
+
+    while (decimal > 0)
+    {
+        hexadecimal = digits[decimal % 16] + hexadecimal;
+        decimal = decimal / 16;
+    }
+
+    return hexadecimal;
+}
